@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: false,
           onTap: (value) {
-            botnavBloc.add(ChangeNavbarEvent(newIndex: value));
+            botnavBloc.add(ChangeNavbarEvent(newIndex: value),);
           },
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,

@@ -25,3 +25,28 @@ class NavigateNavbarState extends Equatable {
   @override
   bool get stringify => true;
 }
+
+class IsSelectedState extends Equatable {
+  final int indSelected;
+  IsSelectedState({
+    required this.indSelected,
+  });
+
+  factory IsSelectedState.initial() {
+    return IsSelectedState(indSelected: 0);
+  }
+
+  IsSelectedState copyWith({
+    int? indSelected,
+  }) {
+    return IsSelectedState(
+      indSelected: indSelected ?? this.indSelected,
+    );
+  }
+
+  @override
+  List<Object> get props => [indSelected];
+
+  @override
+  bool get stringify => true;
+}

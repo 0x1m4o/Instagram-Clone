@@ -10,6 +10,7 @@ abstract class NavigateNavbarEvent extends Equatable {
 
 class ChangeNavbarEvent extends NavigateNavbarEvent {
   final int newIndex;
+
   ChangeNavbarEvent({
     required this.newIndex,
   });
@@ -19,6 +20,22 @@ class ChangeNavbarEvent extends NavigateNavbarEvent {
   }) {
     return ChangeNavbarEvent(
       newIndex: newIndex ?? this.newIndex,
+    );
+  }
+}
+
+class IsSelectedEvent extends NavigateNavbarEvent {
+  final int indSelected;
+
+  IsSelectedEvent({
+    required this.indSelected,
+  });
+
+  IsSelectedEvent copyWith({
+    int? indSelected,
+  }) {
+    return IsSelectedEvent(
+      indSelected: indSelected ?? this.indSelected,
     );
   }
 }
